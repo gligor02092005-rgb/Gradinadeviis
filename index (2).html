@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grădina de Vis - Substraturi și Nutriție Premium</title>
+    <!-- Import Fonturi pentru Design Modern -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Legătură CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigare principală -->
+    <nav id="main-nav">
+        <div class="logo">Grădina de Vis</div>
+        <ul class="nav-links">
+            <li><a href="#home">Acasă</a></li>
+            <li><a href="#proiecte">Ghidează-mă</a></li>
+            <li><a href="#produse">Catalog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="cart-status">
+            <span id="cart-icon">Coș</span>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <h1>Succesul oricărei plante începe de la rădăcină.</h1>
+            <p>Fundația pentru grădina ta de vis: substraturi profesionale și amelioratori organici adaptați nevoilor tale.</p>
+            <button type="button" onclick="document.getElementById('proiecte').scrollIntoView({behavior:'smooth'})">Găsește soluția pentru tine</button>
+        </section>
+
+        <!-- Secțiune bazată pe Obiective (Model Mental UX) -->
+        <section id="proiecte">
+            <h2>Ce vrei să realizezi astăzi?</h2>
+            <p>Alege obiectivul tău pentru a vedea produsele recomandate de specialiști.</p>
+            
+            <div class="goal-grid">
+                <article class="goal-card" data-goal="rasaduri">
+                    <h3>Vreau să cresc răsaduri sănătoase</h3>
+                    <p>Substraturi fine, aerate, ideale pentru germinare și dezvoltarea rădăcinilor tinere.</p>
+                    <button type="button" class="filter-btn">Vezi recomandări</button>
+                </article>
+
+                <article class="goal-card" data-goal="flori">
+                    <h3>Vreau flori bogate în balcon</h3>
+                    <p>Amestecuri pre-fertilizate pentru o înflorire spectaculoasă și nutriție de durată.</p>
+                    <button type="button" class="filter-btn">Vezi recomandări</button>
+                </article>
+
+                <article class="goal-card" data-goal="sustenabilitate">
+                    <h3>Caut alternative sustenabile</h3>
+                    <p>Fibră de cocos și componente organice care protejează mediul și rețin eficient apa.</p>
+                    <button type="button" class="filter-btn">Vezi recomandări</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Catalog Produse -->
+        <section id="produse">
+            <h2>Catalog Substraturi Premium</h2>
+            
+            <div class="product-filters">
+                <label for="category-select">Filtrează după categorie:</label>
+                <select id="category-select">
+                    <option value="all">Toate produsele</option>
+                    <option value="universal">Substraturi Universale</option>
+                    <option value="amelioratori">Componente și Amelioratori</option>
+                </select>
+            </div>
+
+            <div class="product-grid">
+                <!-- Produs 1 -->
+                <article class="product-card" data-category="universal">
+                    <img src="https://images.unsplash.com/photo-1615412704911-55d589229864?auto=format&fit=crop&q=80&w=600" alt="Terra-Mix Universal">
+                    <h3>Terra-Mix Universal</h3>
+                    <p class="product-desc">Amestec echilibrat cu turbă și perlit pentru o aerisire excelentă.</p>
+                    <ul class="product-specs">
+                        <li>Volum: 70 Litri</li>
+                        <li>Tip: Cu Îngrășământ</li>
+                    </ul>
+                    <span class="price">98 lei</span>
+
+                    <div class="order-controls">
+                        <div class="qty-selector">
+                            <button type="button" class="qty-minus">-</button>
+                            <input type="number" value="1" min="1" max="99" readonly>
+                            <button type="button" class="qty-plus">+</button>
+                        </div>
+                        <button type="button" class="add-to-cart">Adaugă în coș</button>
+                    </div>
+                </article>
+
+                <!-- Produs 2 -->
+                <article class="product-card" data-category="universal">
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&q=80&w=600" alt="Flori-Max Confort">
+                    <h3>Flori-Max Confort</h3>
+                    <p class="product-desc">Substrat gata de utilizat, pre-fertilizat pentru toate florile tale.</p>
+                    <ul class="product-specs">
+                        <li>Volum: 50 Litri</li>
+                        <li>Caracteristică: pH Control</li>
+                    </ul>
+                    <span class="price">76 lei</span>
+
+                    <div class="order-controls">
+                        <div class="qty-selector">
+                            <button type="button" class="qty-minus">-</button>
+                            <input type="number" value="1" min="1" max="99" readonly>
+                            <button type="button" class="qty-plus">+</button>
+                        </div>
+                        <button type="button" class="add-to-cart">Adaugă în coș</button>
+                    </div>
+                </article>
+
+                <!-- Produs 3 -->
+                <article class="product-card" data-category="amelioratori">
+                    <img src="https://images.unsplash.com/photo-1599590984817-0243171bc84c?auto=format&fit=crop&q=80&w=600" alt="Fibra de Cocos Presata">
+                    <h3>Fibră de Cocos Presată</h3>
+                    <p class="product-desc">Alternativă sustenabilă la turbă. Reține umiditatea mult mai eficient.</p>
+                    <ul class="product-specs">
+                        <li>Volum: 5 Litri</li>
+                        <li>Etichetă: Eco-Friendly</li>
+                    </ul>
+                    <span class="price">88 lei</span>
+
+                    <div class="order-controls">
+                        <div class="qty-selector">
+                            <button type="button" class="qty-minus">-</button>
+                            <input type="number" value="1" min="1" max="99" readonly>
+                            <button type="button" class="qty-plus">+</button>
+                        </div>
+                        <button type="button" class="add-to-cart">Adaugă în coș</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Notificare Modeless (Rich Visual Modeless Feedback) -->
+    <aside id="toast-notification" aria-live="polite" hidden>
+        <p>Produsul a fost adăugat cu succes în coș!</p>
+    </aside>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2026 Grădina de Vis. Elegance in every leaf.</p>
+            <nav>
+                <a href="#">Privitate</a> | 
+                <a href="#">Termeni</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Legătură JavaScript (la final pentru performanță) -->
+    <script src="script.js"></script>
+</body>
+</html>
